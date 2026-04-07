@@ -117,3 +117,5 @@ Removal from project involvement.
 This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 2.1.
 
 [homepage]: https://www.contributor-covenant.org
+
+[Jacob Verardo](https://drive.google.com/file/d/18MVJj1h_KNgFj-BjZAA2Svdam0LGdE99/view?usp=sharing)
