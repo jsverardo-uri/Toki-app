@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "909592406587",
+    "project_id": "toki-2mqirk",
+    "storage_bucket": "toki-2mqirk.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909592406587:android:5b1d98dc944117608fca1e",
+        "android_client_info": {
+          "package_name": "com.mycompany.toki"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwaZn84uhD8Ld9B8KE7uXvpQZoP_RQIgU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
