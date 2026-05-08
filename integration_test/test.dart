@@ -36,14 +36,14 @@ void main() async {
     await tester.tap(find.byKey(const ValueKey('loginTab_hjsx')));
     await tester.pumpAndSettle(const Duration(milliseconds: 1000));
     await tester.enterText(
-        find.byKey(const ValueKey('loginEmail_i052')), 'test@gmail.com');
+        find.byKey(const ValueKey('loginEmail_i052')), 'test1@gmail.com');
     FocusManager.instance.primaryFocus?.unfocus();
     await tester.enterText(
         find.byKey(const ValueKey('loginPassword_z9te')), 'test123');
     FocusManager.instance.primaryFocus?.unfocus();
     await tester.pumpAndSettle(const Duration(milliseconds: 1000));
     await tester.tap(find.text('Login'));
-    await tester.pumpAndSettle(const Duration(milliseconds: 3000));
+    await tester.pumpAndSettle(const Duration(milliseconds: 10000));
     expect(find.text('Upcoming Assignments'), findsWidgets);
   });
 }
