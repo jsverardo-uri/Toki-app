@@ -1,32 +1,24 @@
 # Toki
+Repository for the school assignment tracker Toki
 
-A new Flutter project.
+Toki is an AI-powered student assignment tracker that converts syllabi and schedules into organized assignments.
 
-## Getting Started
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](docs/CONDUCT.md)
 
-FlutterFlow projects are built to run on the Flutter _stable_ release.
+## Code of Conduct
 
-## Integration Tests
+This project follows the Contributor Covenant Code of Conduct.  
+See [CONDUCT.md](docs/CONDUCT.md) for details.
 
-To test on a real iOS / Android device, first connect the device and run the following command from the root of the project:
+## Core Features
 
-```bash
-flutter test integration_test/test.dart
-```
+- AI syllabus parsing
+- Manual assingment entry
+- Asignment completion tracking
+- Assignment editing/deletion
 
-To test on a web browser, first launch `chromedriver` as follows:
-```bash
-chromedriver --port=4444
-```
+## Links
 
-Then from the root of the project, run the following command:
-```bash
-flutter drive \
-  --driver=test_driver/integration_test.dart \
-  --target=integration_test/test.dart \
-  -d chrome
-```
-
-Find more information about running Flutter integration tests [here](https://docs.flutter.dev/cookbook/testing/integration/introduction#5-run-the-integration-test).
-
-Refer to this guide for instructions on running the tests on [Firebase Test Lab](https://github.com/flutter/flutter/tree/main/packages/integration_test#firebase-test-lab).
+- [Published Web App](https://toki-2mqirk.flutterflow.app)
+- [Marketing Website](https://sites.google.com/uri.edu/toki/home)
+- [Developer Wiki](https://github.com/jsverardo-uri/Toki-app/wiki)
