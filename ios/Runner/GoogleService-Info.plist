@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.mycompany.toki</string>
+	<string>com.uricsc305.toki</string>
 	<key>PROJECT_ID</key>
 	<string>toki-2mqirk</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:909592406587:ios:9e7f7ad7ddd521748fca1e</string>
+	<string>1:909592406587:ios:f120f26c85dcc7e48fca1e</string>
 </dict>
 </plist>
