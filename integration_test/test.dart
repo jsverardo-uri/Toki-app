@@ -41,7 +41,7 @@ void main() async {
         find.byKey(const ValueKey('loginPassword_z9te')), 'test123');
     FocusManager.instance.primaryFocus?.unfocus();
     await tester.pumpAndSettle(const Duration(milliseconds: 1000));
-    await tester.tap(find.byKey(const ValueKey('signUpButton_7z57')));
+    await tester.tap(find.text('Login'));
     await tester.pumpAndSettle(const Duration(milliseconds: 3000));
     expect(find.text('Upcomin Assignments'), findsWidgets);
   });
