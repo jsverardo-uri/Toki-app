@@ -2,6 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/components/app_logo_header/app_logo_header_widget.dart';
 import '/components/assignment_tile/assignment_tile_widget.dart';
+import '/flutter_flow/flutter_flow_ad_banner.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -187,6 +188,12 @@ class _CompletedAssignmentsWidgetState
                       ].divide(SizedBox(height: 12.0)),
                     ),
                   ),
+                ),
+                FlutterFlowAdBanner(
+                  width: MediaQuery.sizeOf(context).width * 1.0,
+                  height: 50.0,
+                  showsTestAd: true,
+                  androidAdUnitID: 'ca-app-pub-3940256099942544/6300978111',
                 ),
               ],
             ),

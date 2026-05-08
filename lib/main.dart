@@ -11,6 +11,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'index.dart';
 
+import '/flutter_flow/admob_util.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   GoRouter.optionURLReflectsImperativeAPIs = true;
@@ -20,6 +22,8 @@ void main() async {
   await environmentValues.initialize();
 
   await initFirebase();
+
+  adMobUpdateRequestConfiguration();
 
   await initializeFirebaseRemoteConfig();
 

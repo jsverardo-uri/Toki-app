@@ -69,158 +69,160 @@ class _AssignmentTileWidgetState extends State<AssignmentTileWidget> {
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
-          Row(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Expanded(
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    logFirebaseEvent('ASSIGNMENT_TILE_Column_cib31yzi_ON_TAP');
-                    logFirebaseEvent('Column_bottom_sheet');
-                    await showModalBottomSheet(
-                      isScrollControlled: true,
-                      backgroundColor: Colors.transparent,
-                      enableDrag: false,
-                      context: context,
-                      builder: (context) {
-                        return Padding(
-                          padding: MediaQuery.viewInsetsOf(context),
-                          child: AssignmentDetailsSheetWidget(
-                            assignmentRef: widget.assignmentRef!,
-                            assignmentTitle: widget.assignmentTitle!,
-                            assignmentDetails: widget.assignmentDetails!,
-                            courseName: widget.courseName!,
-                            dueDate: widget.dueDate!,
-                            isCompleted: widget.isCompleted!,
-                          ),
-                        );
-                      },
-                    ).then((value) => safeSetState(() {}));
+          if (getRemoteConfigString('completion_button_position') == 'left')
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Expanded(
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      logFirebaseEvent(
+                          'ASSIGNMENT_TILE_Column_cib31yzi_ON_TAP');
+                      logFirebaseEvent('Column_bottom_sheet');
+                      await showModalBottomSheet(
+                        isScrollControlled: true,
+                        backgroundColor: Colors.transparent,
+                        enableDrag: false,
+                        context: context,
+                        builder: (context) {
+                          return Padding(
+                            padding: MediaQuery.viewInsetsOf(context),
+                            child: AssignmentDetailsSheetWidget(
+                              assignmentRef: widget.assignmentRef!,
+                              assignmentTitle: widget.assignmentTitle!,
+                              assignmentDetails: widget.assignmentDetails!,
+                              courseName: widget.courseName!,
+                              dueDate: widget.dueDate!,
+                              isCompleted: widget.isCompleted!,
+                            ),
+                          );
+                        },
+                      ).then((value) => safeSetState(() {}));
 
-                    logFirebaseEvent('Column_google_analytics_event');
-                    logFirebaseEvent('assignment_viewed');
-                  },
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              12.0, 10.0, 0.0, 0.0),
-                          child: Text(
-                            widget.assignmentTitle!,
-                            textAlign: TextAlign.start,
-                            maxLines: 1,
-                            style: FlutterFlowTheme.of(context).body.override(
-                                  font: GoogleFonts.roboto(
+                      logFirebaseEvent('Column_google_analytics_event');
+                      logFirebaseEvent('assignment_viewed');
+                    },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Align(
+                          alignment: AlignmentDirectional(-1.0, 0.0),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                12.0, 10.0, 0.0, 0.0),
+                            child: Text(
+                              widget.assignmentTitle!,
+                              textAlign: TextAlign.start,
+                              maxLines: 1,
+                              style: FlutterFlowTheme.of(context).body.override(
+                                    font: GoogleFonts.roboto(
+                                      fontWeight: FontWeight.normal,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .body
+                                          .fontStyle,
+                                    ),
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    fontSize: 16.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .body
                                         .fontStyle,
                                   ),
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  fontSize: 16.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.normal,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .body
-                                      .fontStyle,
-                                ),
-                            overflow: TextOverflow.ellipsis,
+                              overflow: TextOverflow.ellipsis,
+                            ),
                           ),
                         ),
-                      ),
-                      Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              12.0, 0.0, 0.0, 0.0),
-                          child: Text(
-                            '${widget.courseName}  •  Due ${dateTimeFormat("MMMEd", widget.dueDate)}',
-                            textAlign: TextAlign.start,
-                            maxLines: 1,
-                            style: FlutterFlowTheme.of(context).body.override(
-                                  font: GoogleFonts.roboto(
+                        Align(
+                          alignment: AlignmentDirectional(-1.0, 0.0),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                12.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              '${widget.courseName}  •  Due ${dateTimeFormat("MMMEd", widget.dueDate)}',
+                              textAlign: TextAlign.start,
+                              maxLines: 1,
+                              style: FlutterFlowTheme.of(context).body.override(
+                                    font: GoogleFonts.roboto(
+                                      fontWeight: FontWeight.normal,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .body
+                                          .fontStyle,
+                                    ),
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
+                                    fontSize: 16.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .body
                                         .fontStyle,
                                   ),
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  fontSize: 16.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.normal,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .body
-                                      .fontStyle,
-                                ),
-                            overflow: TextOverflow.ellipsis,
+                              overflow: TextOverflow.ellipsis,
+                            ),
                           ),
                         ),
-                      ),
-                    ].divide(SizedBox(height: 5.0)),
-                  ),
-                ),
-              ),
-              Theme(
-                data: ThemeData(
-                  checkboxTheme: CheckboxThemeData(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4.0),
+                      ].divide(SizedBox(height: 5.0)),
                     ),
                   ),
-                  unselectedWidgetColor:
-                      FlutterFlowTheme.of(context).primaryText,
                 ),
-                child: Checkbox(
-                  value: _model.checkboxValue1 ??=
-                      widget.isCompleted! ? true : false,
-                  onChanged: (newValue) async {
-                    safeSetState(() => _model.checkboxValue1 = newValue!);
-                    if (newValue!) {
-                      logFirebaseEvent(
-                          'ASSIGNMENT_TILE_Checkbox_n5g3yzkv_ON_TOG');
-                      logFirebaseEvent('Checkbox_backend_call');
+                Theme(
+                  data: ThemeData(
+                    checkboxTheme: CheckboxThemeData(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4.0),
+                      ),
+                    ),
+                    unselectedWidgetColor:
+                        FlutterFlowTheme.of(context).primaryText,
+                  ),
+                  child: Checkbox(
+                    value: _model.checkboxValue1 ??=
+                        widget.isCompleted! ? true : false,
+                    onChanged: (newValue) async {
+                      safeSetState(() => _model.checkboxValue1 = newValue!);
+                      if (newValue!) {
+                        logFirebaseEvent(
+                            'ASSIGNMENT_TILE_Checkbox_n5g3yzkv_ON_TOG');
+                        logFirebaseEvent('Checkbox_backend_call');
 
-                      await widget.assignmentRef!
-                          .update(createAssignmentsRecordData(
-                        completed: true,
-                        completedTime: getCurrentTimestamp,
-                      ));
-                      logFirebaseEvent('Checkbox_google_analytics_event');
-                      logFirebaseEvent('assignment_completed');
-                    } else {
-                      logFirebaseEvent(
-                          'ASSIGNMENT_TILE_Checkbox_n5g3yzkv_ON_TOG');
-                      logFirebaseEvent('Checkbox_backend_call');
+                        await widget.assignmentRef!
+                            .update(createAssignmentsRecordData(
+                          completed: true,
+                          completedTime: getCurrentTimestamp,
+                        ));
+                        logFirebaseEvent('Checkbox_google_analytics_event');
+                        logFirebaseEvent('assignment_completed');
+                      } else {
+                        logFirebaseEvent(
+                            'ASSIGNMENT_TILE_Checkbox_n5g3yzkv_ON_TOG');
+                        logFirebaseEvent('Checkbox_backend_call');
 
-                      await widget.assignmentRef!
-                          .update(createAssignmentsRecordData(
-                        completed: false,
-                        completedTime: null,
-                      ));
-                    }
-                  },
-                  side: (FlutterFlowTheme.of(context).primaryText != null)
-                      ? BorderSide(
-                          width: 2,
-                          color: FlutterFlowTheme.of(context).primaryText,
-                        )
-                      : null,
-                  activeColor: FlutterFlowTheme.of(context).primaryBackground,
-                  checkColor: FlutterFlowTheme.of(context).info,
+                        await widget.assignmentRef!
+                            .update(createAssignmentsRecordData(
+                          completed: false,
+                          completedTime: null,
+                        ));
+                      }
+                    },
+                    side: (FlutterFlowTheme.of(context).primaryText != null)
+                        ? BorderSide(
+                            width: 2,
+                            color: FlutterFlowTheme.of(context).primaryText,
+                          )
+                        : null,
+                    activeColor: FlutterFlowTheme.of(context).primaryBackground,
+                    checkColor: FlutterFlowTheme.of(context).info,
+                  ),
                 ),
-              ),
-            ],
-          ),
-          if (getRemoteConfigString('completion_button_position') == '')
+              ],
+            ),
+          if (getRemoteConfigString('completion_button_position') == 'right')
             Row(
               mainAxisSize: MainAxisSize.max,
               children: [
