@@ -1,7 +1,9 @@
-# Toki
+# Toki-app
+Repository for the school assignment tracker Toki
 
-A new Flutter project.
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](docs/CONDUCT.md)
 
-## Getting Started
+## Code of Conduct
 
-FlutterFlow projects are built to run on the Flutter _stable_ release.
+This project follows the Contributor Covenant Code of Conduct.  
+See [CONDUCT.md](docs/CONDUCT.md) for details.
