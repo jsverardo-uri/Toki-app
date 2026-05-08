@@ -32,6 +32,7 @@ void main() async {
     await tester.pumpWidget(const MyApp());
     await GoogleFonts.pendingFonts();
 
+    await tester.pumpAndSettle(const Duration(milliseconds: 5000));
     await tester.tap(find.byKey(const ValueKey('loginTab_hjsx')));
     await tester.pumpAndSettle(const Duration(milliseconds: 1000));
     await tester.enterText(
@@ -43,7 +44,7 @@ void main() async {
     await tester.pumpAndSettle(const Duration(milliseconds: 1000));
     await tester.tap(find.text('Login'));
     await tester.pumpAndSettle(const Duration(milliseconds: 3000));
-    expect(find.text('Upcomin Assignments'), findsWidgets);
+    expect(find.text('Upcoming Assignments'), findsWidgets);
   });
 }
 
